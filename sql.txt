@@ -1,0 +1,8 @@
+alter table lcappnt add (movetorsdtladdrdate  Date);
+comment on column lcappnt.movetorsdtladdrdate is '搬迁到现居住地的日期';
+
+insert into elementsofcontrol (SID, ID, DEFAULTVALUE, VALIDITEM, RELATEOBJECTFIELD, COMORDER, ELEMENTSTATUS, COMBINEDID, SUBSID, CSSCLASS)
+values ('lcappnt', 'movetorsdtladdrdate', null, '{"notEmpty":null}', null, 22, '01', 'INSH', 'addressprevious', null);
+
+insert into formelement (SID, ID, NAME, TEXT, TYPE, ENGLISHTEXT, CHECKBOXOPTION, GROUPID, PARENTID, NOTICEELEMENTGROUP, CSSCLASS)
+values ('lcappnt', 'movetorsdtladdrdate', 'movetorsdtladdrdate', '搬迁到现居住地址时间', 'databox', null, null, 'lcappnt', null, null, null);
