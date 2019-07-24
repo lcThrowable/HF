@@ -13,3 +13,7 @@ update elementsofcontrol set elementstatus='02' where ID='employdetails';
 
 update elementsofcontrol set validitem='{"notEmpty":null}' where ID='otherresponsibility';
 update elementsofcontrol set validitem='{"notEmpty":null}' where ID='lcinsuredotherresponsibIility';
+
+
+insert into elementsofcontrol (SID, ID, DEFAULTVALUE, VALIDITEM, RELATEOBJECTFIELD, COMORDER, ELEMENTSTATUS, COMBINEDID, SUBSID, CSSCLASS)
+values ('PIPLINEINFO', 'appntname', null, null, null, 7, '01', 'piplineop', 'two', null);
