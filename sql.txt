@@ -17,3 +17,5 @@ update elementsofcontrol set validitem='{"notEmpty":null}' where ID='lcinsuredot
 
 insert into elementsofcontrol (SID, ID, DEFAULTVALUE, VALIDITEM, RELATEOBJECTFIELD, COMORDER, ELEMENTSTATUS, COMBINEDID, SUBSID, CSSCLASS)
 values ('PIPLINEINFO', 'appntname', null, null, null, 7, '01', 'piplineop', 'two', null);
+
+update elementsofcontrol set elementstatus='02' where ID='movetorsdtladdrdate';
