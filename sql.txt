@@ -3,7 +3,7 @@ alter table lcappnt add (movetorsdtladdrdate  Date);
 comment on column lcappnt.movetorsdtladdrdate is '搬迁到现居住地的日期';
 
 insert into elementsofcontrol (SID, ID, DEFAULTVALUE, VALIDITEM, RELATEOBJECTFIELD, COMORDER, ELEMENTSTATUS, COMBINEDID, SUBSID, CSSCLASS)
-values ('lcappnt', 'movetorsdtladdrdate', null, '{"notEmpty":null}', null, 22, '01', 'INSH', 'addressprevious', null);
+values ('lcappnt', 'movetorsdtladdrdate', null, '{"notEmpty":null}', null, 22, '01', 'INSH', 'addresshome', null);
 
 insert into formelement (SID, ID, NAME, TEXT, TYPE, ENGLISHTEXT, CHECKBOXOPTION, GROUPID, PARENTID, NOTICEELEMENTGROUP, CSSCLASS)
 values ('lcappnt', 'movetorsdtladdrdate', 'movetorsdtladdrdate', '搬迁到现居住地址时间', 'databox', null, null, 'lcappnt', null, null, null);
@@ -18,4 +18,4 @@ update elementsofcontrol set validitem='{"notEmpty":null}' where ID='lcinsuredot
 insert into elementsofcontrol (SID, ID, DEFAULTVALUE, VALIDITEM, RELATEOBJECTFIELD, COMORDER, ELEMENTSTATUS, COMBINEDID, SUBSID, CSSCLASS)
 values ('PIPLINEINFO', 'appntname', null, null, null, 7, '01', 'piplineop', 'two', null);
 
-update elementsofcontrol set elementstatus='02' where ID='movetorsdtladdrdate';
+uat:update elementsofcontrol set  validitem='{"notEmpty":null}',elementstatus='02' where ID='movetorsdtladdrdate';
