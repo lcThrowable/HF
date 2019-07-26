@@ -19,3 +19,4 @@ insert into elementsofcontrol (SID, ID, DEFAULTVALUE, VALIDITEM, RELATEOBJECTFIE
 values ('PIPLINEINFO', 'appntname', null, null, null, 7, '01', 'piplineop', 'two', null);
 
 uat:update elementsofcontrol set  validitem='{"notEmpty":null}',elementstatus='02' where ID='movetorsdtladdrdate';
+update elementsofcontrol set  subsid='addresshome' where ID='movetorsdtladdrdate';
