@@ -9,3 +9,4 @@ update elementsofcontrol set elementstatus='02' where ID='employdetails';
 
 update elementsofcontrol set validitem='{"notEmpty":null}' where ID='otherresponsibility';
 update elementsofcontrol set validitem='{"notEmpty":null}' where ID='lcinsuredotherresponsibIility';
+commit;
