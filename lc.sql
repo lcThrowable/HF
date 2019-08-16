@@ -1,22 +1,11 @@
-
-alter table lcappnt add (movetorsdtladdrdate  Date);
-comment on column lcappnt.movetorsdtladdrdate is '搬迁到现居住地的日期';
-
 insert into elementsofcontrol (SID, ID, DEFAULTVALUE, VALIDITEM, RELATEOBJECTFIELD, COMORDER, ELEMENTSTATUS, COMBINEDID, SUBSID, CSSCLASS)
 values ('lcappnt', 'movetorsdtladdrdate', null, '{"notEmpty":null}', null, 22, '02', 'INSH', 'addresshome', null);
 
 insert into formelement (SID, ID, NAME, TEXT, TYPE, ENGLISHTEXT, CHECKBOXOPTION, GROUPID, PARENTID, NOTICEELEMENTGROUP, CSSCLASS)
-values ('lcappnt', 'movetorsdtladdrdate', 'movetorsdtladdrdate', '搬迁到现居住地址时间', 'databox', null, null, 'lcappnt', null, null, null);
+values ('lcappnt', 'movetorsdtladdrdate', 'movetorsdtladdrdate', '鎼縼鍒扮幇灞呬綇鍦板潃鏃堕棿', 'databox', null, null, 'lcappnt', null, null, null);
 
 update elementsofcontrol set elementstatus='02' where ID='lcinsuredemploydetails';
 update elementsofcontrol set elementstatus='02' where ID='employdetails';
 
 update elementsofcontrol set validitem='{"notEmpty":null}' where ID='otherresponsibility';
 update elementsofcontrol set validitem='{"notEmpty":null}' where ID='lcinsuredotherresponsibIility';
-
-
-insert into elementsofcontrol (SID, ID, DEFAULTVALUE, VALIDITEM, RELATEOBJECTFIELD, COMORDER, ELEMENTSTATUS, COMBINEDID, SUBSID, CSSCLASS)
-values ('PIPLINEINFO', 'appntname', null, null, null, 7, '01', 'piplineop', 'two', null);
-
-uat:update elementsofcontrol set  validitem='{"notEmpty":null}',elementstatus='02' where ID='movetorsdtladdrdate';
-update elementsofcontrol set  subsid='addresshome' where ID='movetorsdtladdrdate';
