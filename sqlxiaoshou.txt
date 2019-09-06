@@ -9,8 +9,14 @@
 
 
 
-    select * from Lduser l
-          inner join Ldusertomenugrp lm on  lm.usercode  = l.emplid  
-          inner join Ldmenugrpa lg on lm.menugrpcode=lg.menugrpcode and lg.menugrpname='C'
-          inner join Piplinebranch p  on l.emplid      = p.staffid
-          and p.branchcode='431'
+
+
+
+                                         select l from Lduser l 
+					left join Ldusertomenugrp  lm  on lm.id.usercode 	= l.emplid 
+					left join Ldmenugrpa lg        on lm.id.menugrpcode 	= lg.id.menugrpcode 
+					left join Piplinebranch p      on l.emplid 			= p.id.staffid 
+								and  p.id.branchcode =:companycode
+					 where lg.id.menugrpname =:roleName  
+					and (l.companycode   =:companycode  
+					 OR p.id.branchcode =:companycode )  ;
