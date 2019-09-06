@@ -1,0 +1,8 @@
+      select * from Lduser l 
+            left join Ldusertomenugrp  lm  on lm.usercode  = l.emplid 
+            left join Ldmenugrpa lg        on lm.menugrpcode   = lg.menugrpcode  
+            left join Piplinebranch p      on l.emplid      = p.staffid  
+                and  p.branchcode ='001'
+            where lm.menugrpcode='RM'
+  
+           AND (l.companycode   ='001'    OR p.branchcode = '001' )
