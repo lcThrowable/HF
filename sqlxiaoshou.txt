@@ -6,3 +6,11 @@
             where lm.menugrpcode='RM'
   
            AND (l.companycode   ='001'    OR p.branchcode = '001' )
+
+
+
+    select * from Lduser l
+          inner join Ldusertomenugrp lm on  lm.usercode  = l.emplid  
+          inner join Ldmenugrpa lg on lm.menugrpcode=lg.menugrpcode and lg.menugrpname='C'
+          inner join Piplinebranch p  on l.emplid      = p.staffid
+          and p.branchcode='431'
